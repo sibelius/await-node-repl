@@ -31,6 +31,10 @@ function myEval(cmd, context, filename, callback) {
 
 let _eval;
 
+function myFunc() {
+  return 'awesome function';
+}
+
 (async() => {
   try {
     let repl = REPL.start({
@@ -40,7 +44,8 @@ let _eval;
     _eval = repl.eval;
     repl.eval = myEval;
 
-    // repl.context.
+    // TODO - add custom functions to context
+    repl.context.myFunc = myFunc;
 
     history(repl, `${process.env.HOME}/.node_history`);
 
