@@ -1,5 +1,8 @@
 # Await Node Repl
 
+## Blog post
+https://medium.com/@sibelius/node-repl-with-await-syntax-6e351e347292#.cnqogx385
+
 ## Setup
 
 First, install deps
